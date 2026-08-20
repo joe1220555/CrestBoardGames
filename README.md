@@ -39,7 +39,7 @@ plugins/CrestBoardGames/
 ```text
 boardgames-api               公開且穩定的遊戲模組 API
 boardgames-core              Purpur 插件、模組載入與共用服務
-modules/crest-mahjong        日本麻將
+modules/crest-mahjong        台灣十六張麻將
 modules/crest-color-cards    彩色卡牌
 modules/crest-gomoku         五子棋
 modules/crest-chinese-chess  中國象棋
@@ -64,6 +64,7 @@ modules/crest-poker          撲克牌
 - [完整架構](docs/ARCHITECTURE.md)
 - [模組開發規格](docs/MODULE_DEVELOPMENT.md)
 - [參考專案與授權原則](docs/REFERENCES.md)
+- [台灣十六張麻將進度](docs/TAIWAN_MAHJONG.md)
 - [貢獻指南](CONTRIBUTING.md)
 - [安全政策](SECURITY.md)
 

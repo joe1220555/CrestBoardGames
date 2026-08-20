@@ -12,7 +12,7 @@ public final class CrestMahjongModule implements BoardGameModule {
 
     @Override
     public ModuleDescription description() {
-        return new ModuleDescription("mahjong", "CrestMahjong", "日本麻將", "0.1.0-SNAPSHOT", 1,
+        return new ModuleDescription("mahjong", "CrestMahjong", "台灣十六張麻將", "0.1.0-SNAPSHOT", 1,
                 getClass().getName());
     }
 
@@ -23,7 +23,7 @@ public final class CrestMahjongModule implements BoardGameModule {
 
     @Override
     public void onEnable() {
-        context.api().registerGame(new GameDefinition("mahjong", "日本麻將", 3, 4, true, true));
+        context.api().registerGame(new GameDefinition("mahjong", "台灣十六張麻將", 4, 4, true, true));
     }
 
     @Override
@@ -32,6 +32,6 @@ public final class CrestMahjongModule implements BoardGameModule {
 
     @Override
     public GameSession createSession(GameCreationContext creationContext) {
-        throw new UnsupportedOperationException("日本麻將規則引擎尚未實作");
+        throw new UnsupportedOperationException("台灣麻將對局狀態機尚未接上實體牌桌");
     }
 }

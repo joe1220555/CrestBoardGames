@@ -18,7 +18,7 @@ modules/CrestMahjong/data/
 ```yaml
 id: mahjong
 name: CrestMahjong
-display-name: 日本麻將
+display-name: 台灣十六張麻將
 version: 1.0.0
 api-version: 1
 main: tw.crestnetwork.boardgames.mahjong.CrestMahjongModule

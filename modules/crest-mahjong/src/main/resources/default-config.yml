@@ -1,8 +1,11 @@
 enabled: true
 rules:
   players: 4
-  starting-points: 25000
-  red-fives: true
-  open-tanyao: true
+  hand-size: 16
+  flowers: true
+  multiple-winners: false
+  minimum-tai: 0
+  dealer-continuation: true
+  action-seconds: 30
 bots:
   enabled: true
