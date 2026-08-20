@@ -8,12 +8,12 @@ CrestBoardGames 是為 Purpur 26.2 設計的模組化 Minecraft 實體桌遊核�
 
 - 共用桌遊大廳與房間 GUI
 - 世界內實體牌桌、座位、牌、棋子與互動熱點
-- 使用 Display／Interaction 實體呈現，並支援 Oraxen 自訂模型
+- 使用 Display／Interaction 實體呈現，並以 Oraxen 自訂物品與模型呈現遊戲元件
 - 伺服器重啟後復原牌桌與未結束對局
 - 房主、玩家、準備、觀戰與重連
 - 安全的箱子 GUI，玩家不能拿走按鈕物品
 - 機器人、戰績、積分、賽季與排行榜
-- 網站設定同步與 Oraxen 選用整合
+- 網站設定同步與 Oraxen 必要整合
 - 單一模組故障不影響其他桌遊
 
 ## 執行時目錄
@@ -53,6 +53,19 @@ boardgames-core              Purpur 插件、模組載入與共用服務
 | 中國象棋 | CrestChineseChess | 規劃中 |
 | 西洋棋 | CrestChess | 規劃中 |
 | 撲克牌 | CrestPoker | 規劃中 |
+
+## 安裝與指令
+
+Oraxen 是必要依賴。伺服器需要同時安裝 `Oraxen` 、`CrestBoardGames.jar` 及至少一個遊戲模組；若 Oraxen 缺少，Purpur 不會啟用 CrestBoardGames。
+
+```text
+/bg create mahjong   建立實體麻將桌
+/bg join [房號]      加入牌桌
+/bg start            由房主開始對局
+/bg leave            離開牌桌
+/bg rooms            查看現有牌桌
+/bg modules          管理員查看已載入模組
+```
 
 ## 建置
 

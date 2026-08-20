@@ -4,6 +4,8 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import tw.crestnetwork.boardgames.api.BoardGameModule;
 import tw.crestnetwork.boardgames.api.BoardGamesApi;
 import tw.crestnetwork.boardgames.api.ModuleDescription;
+import tw.crestnetwork.boardgames.api.GameCreationContext;
+import tw.crestnetwork.boardgames.api.GameSession;
 import tw.crestnetwork.boardgames.core.CrestBoardGamesPlugin;
 
 import java.io.IOException;
@@ -23,6 +25,7 @@ import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 import java.util.logging.Level;
 import java.util.stream.Stream;
+import java.util.Optional;
 
 public final class ModuleManager {
     private static final String DESCRIPTOR = "crest-boardgame-module.yml";
@@ -177,5 +180,12 @@ public final class ModuleManager {
 
     public List<ModuleDescription> descriptions() {
         return loaded.stream().map(LoadedModule::description).toList();
+    }
+
+    public Optional<GameSession> createSession(String gameId, GameCreationContext context) {
+        return loaded.stream()
+                .filter(module -> module.description().id().equals(gameId))
+                .findFirst()
+                .map(module -> module.instance().createSession(context));
     }
 }

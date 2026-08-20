@@ -4,11 +4,12 @@ main: tw.crestnetwork.boardgames.core.CrestBoardGamesPlugin
 api-version: '26.2'
 author: Crest Network
 description: Modular board game platform for Crest Network
-softdepend: [CrestCore, CrestNetworkBridge, Oraxen, PlaceholderAPI, Vault]
+depend: [Oraxen]
+softdepend: [CrestCore, CrestNetworkBridge, PlaceholderAPI, Vault]
 commands:
   boardgames:
     description: 開啟 Crest 桌遊大廳
-    usage: /boardgames [modules]
+    usage: /boardgames create <遊戲> | join [房號] | start | leave | rooms | modules
     aliases: [bg]
 permissions:
   crestboardgames.use:
