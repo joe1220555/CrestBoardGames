@@ -13,6 +13,18 @@ GUI 僅負責大廳、建立房間、規則、準備、房主與管理員操作�
 3. 模組程式與資料分離：`CrestMahjong.jar` 對應 `CrestMahjong/`。
 4. 核心擁有玩家、房間、GUI、儲存、排行榜與網站同步；模組只實作遊戲規則。
 5. 模組不支援熱卸載，更新 JAR 後必須完整重新啟動伺服器。
+6. 核心與遊戲採多儲存庫架構；本儲存庫不包含任何遊戲規則原始碼。
+
+## 儲存庫邊界
+
+```text
+joe1220555/CrestBoardGames   核心、API、房間、實體桌面與共用服務
+joe1220555/CrestMahjong      台灣十六張麻將規則與畫面
+joe1220555/CrestGomoku       五子棋規則與畫面
+joe1220555/CrestPartyCards   台味派對卡牌規則與牌組
+```
+
+遊戲專案以 compile-only 方式依賴 `boardgames-api`，只輸出自己的模組 JAR。遊戲模組不能直接存取核心內部 package。
 
 ## 核心服務
 

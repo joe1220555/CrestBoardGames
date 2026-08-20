@@ -1,6 +1,6 @@
 # CrestBoardGames
 
-CrestBoardGames 是為 Purpur 26.2 設計的模組化 Minecraft 實體桌遊平台。伺服器只安裝一個核心插件，各遊戲則以獨立模組 JAR 放入核心資料夾。
+CrestBoardGames 是為 Purpur 26.2 設計的模組化 Minecraft 實體桌遊核心。每一款遊戲都是獨立 GitHub 專案及獨立 JAR，由本核心統一載入與管理。
 
 遊戲本體會呈現在 Minecraft 世界中：桌子、牌、麻將牌、棋盤與棋子都是可看見及互動的場景物件。箱子 GUI 只用於建立牌桌、選擇規則、準備與房主管理，不會取代實際遊戲畫面，也不會讓玩家拿走 GUI 按鈕物品。
 
@@ -34,20 +34,25 @@ plugins/CrestBoardGames/
 
 核心只掃描 `modules/` 第一層的 JAR。`CrestMahjong.jar` 的設定與資料固定存放在同層的 `CrestMahjong/`。
 
-## 專案模組
+## 本專案內容
 
 ```text
 boardgames-api               公開且穩定的遊戲模組 API
 boardgames-core              Purpur 插件、模組載入與共用服務
-modules/crest-mahjong        台灣十六張麻將
-modules/crest-color-cards    彩色卡牌
-modules/crest-gomoku         五子棋
-modules/crest-chinese-chess  中國象棋
-modules/crest-chess          西洋棋
-modules/crest-poker          撲克牌
 ```
 
-目前處於架構與 API 骨架階段，已包含模組隔離載入器及實體桌面 API；遊戲規則、實體渲染器與 GUI 尚待實作。第一個正式遊戲模組將是 CrestMahjong，第二個是 CrestGomoku。
+遊戲規則不存放在這個儲存庫。第一個獨立遊戲專案是 [CrestMahjong](https://github.com/joe1220555/CrestMahjong)，其他遊戲會在開始開發時建立各自的公開儲存庫。
+
+## 遊戲專案
+
+| 遊戲 | 儲存庫 | 狀態 |
+|---|---|---|
+| 台灣十六張麻將 | [CrestMahjong](https://github.com/joe1220555/CrestMahjong) | 開發中 |
+| 台味派對卡牌 | CrestPartyCards | 規劃中 |
+| 五子棋 | CrestGomoku | 規劃中 |
+| 中國象棋 | CrestChineseChess | 規劃中 |
+| 西洋棋 | CrestChess | 規劃中 |
+| 撲克牌 | CrestPoker | 規劃中 |
 
 ## 建置
 
@@ -57,14 +62,13 @@ modules/crest-poker          撲克牌
 ./gradlew clean build
 ```
 
-產物會位於各子專案的 `build/libs/`。
+核心產物位於 `boardgames-core/build/libs/CrestBoardGames.jar`。各遊戲必須前往自己的儲存庫建置。
 
 ## 文件
 
 - [完整架構](docs/ARCHITECTURE.md)
 - [模組開發規格](docs/MODULE_DEVELOPMENT.md)
 - [參考專案與授權原則](docs/REFERENCES.md)
-- [台灣十六張麻將進度](docs/TAIWAN_MAHJONG.md)
 - [貢獻指南](CONTRIBUTING.md)
 - [安全政策](SECURITY.md)
 

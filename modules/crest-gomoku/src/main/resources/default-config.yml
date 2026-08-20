@@ -1,7 +1,0 @@
-enabled: true
-rules:
-  board-size: 15
-  win-length: 5
-  forbidden-moves: false
-bots:
-  enabled: true

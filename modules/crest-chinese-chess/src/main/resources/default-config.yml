@@ -1,6 +1,0 @@
-enabled: true
-rules:
-  turn-seconds: 60
-  allow-draw-offer: true
-bots:
-  enabled: true

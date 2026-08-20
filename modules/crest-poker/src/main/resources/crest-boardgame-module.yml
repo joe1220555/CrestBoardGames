@@ -1,6 +1,0 @@
-id: poker
-name: CrestPoker
-display-name: 撲克牌
-version: ${version}
-api-version: 1
-main: tw.crestnetwork.boardgames.modules.poker.CrestPokerModule

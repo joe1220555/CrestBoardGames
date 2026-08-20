@@ -1,6 +1,0 @@
-id: chess
-name: CrestChess
-display-name: 西洋棋
-version: ${version}
-api-version: 1
-main: tw.crestnetwork.boardgames.modules.chess.CrestChessModule
