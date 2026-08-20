@@ -1,0 +1,6 @@
+id: color_cards
+name: CrestColorCards
+display-name: 彩色卡牌
+version: ${version}
+api-version: 1
+main: tw.crestnetwork.boardgames.modules.colorcards.CrestColorCardsModule

@@ -1,0 +1,15 @@
+config-version: 1
+
+locale: zh_TW
+
+modules:
+  require-exact-jar-name: true
+  verify-checksum: true
+
+rooms:
+  maximum-per-player: 1
+  reconnect-seconds: 300
+  allow-spectators: true
+
+storage:
+  type: sqlite

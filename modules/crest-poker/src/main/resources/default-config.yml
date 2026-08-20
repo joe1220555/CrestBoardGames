@@ -1,0 +1,8 @@
+enabled: true
+rules:
+  variant: texas-holdem
+  minimum-players: 2
+  maximum-players: 9
+  starting-chips: 1000
+bots:
+  enabled: true

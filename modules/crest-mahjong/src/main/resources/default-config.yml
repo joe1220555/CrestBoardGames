@@ -1,0 +1,8 @@
+enabled: true
+rules:
+  players: 4
+  starting-points: 25000
+  red-fives: true
+  open-tanyao: true
+bots:
+  enabled: true

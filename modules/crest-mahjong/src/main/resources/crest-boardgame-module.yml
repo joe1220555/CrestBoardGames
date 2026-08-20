@@ -1,0 +1,6 @@
+id: mahjong
+name: CrestMahjong
+display-name: 日本麻將
+version: ${version}
+api-version: 1
+main: tw.crestnetwork.boardgames.modules.mahjong.CrestMahjongModule
