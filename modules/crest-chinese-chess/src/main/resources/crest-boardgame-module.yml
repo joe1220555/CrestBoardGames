@@ -1,6 +1,0 @@
-id: chinese_chess
-name: CrestChineseChess
-display-name: 中國象棋
-version: ${version}
-api-version: 1
-main: tw.crestnetwork.boardgames.modules.chinesechess.CrestChineseChessModule

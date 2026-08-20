@@ -1,7 +1,0 @@
-enabled: true
-rules:
-  turn-seconds: 60
-  allow-castling: true
-  allow-en-passant: true
-bots:
-  enabled: true

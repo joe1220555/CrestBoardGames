@@ -1,8 +1,0 @@
-enabled: true
-rules:
-  minimum-players: 2
-  maximum-players: 10
-  starting-cards: 7
-  stacking-draw-cards: false
-bots:
-  enabled: true

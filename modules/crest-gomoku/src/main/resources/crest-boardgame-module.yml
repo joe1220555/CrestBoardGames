@@ -1,6 +1,0 @@
-id: gomoku
-name: CrestGomoku
-display-name: 五子棋
-version: ${version}
-api-version: 1
-main: tw.crestnetwork.boardgames.modules.gomoku.CrestGomokuModule

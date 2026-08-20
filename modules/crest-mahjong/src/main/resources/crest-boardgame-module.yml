@@ -1,6 +1,0 @@
-id: mahjong
-name: CrestMahjong
-display-name: 台灣十六張麻將
-version: ${version}
-api-version: 1
-main: tw.crestnetwork.boardgames.modules.mahjong.CrestMahjongModule

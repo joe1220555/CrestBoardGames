@@ -40,7 +40,7 @@ main: tw.crestnetwork.boardgames.mahjong.CrestMahjongModule
 
 - `GameCreationContext.table()` 會提供該房間專用的 `PhysicalTable`。
 - 模組以 `PhysicalPiece` 描述牌、麻將牌、棋子或籌碼，不自行保存 Bukkit 實體參照。
-- `modelKey` 由核心解析成原版物品或 Oraxen 模型；沒有 Oraxen 時必須能使用原版後備外觀。
+- 當元件的 `publicState.item` 為 `true` 時，`modelKey` 必須是已存在的 Oraxen 物品 ID。Oraxen 是核心的必要依賴，模組不應使用無 Oraxen 的後備外觀。
 - `TablePosition` 是相對於牌桌原點的位置，讓管理員移動或旋轉整張桌子時不必重算每個物件。
 - 任何私人資訊（例如玩家手牌正面）不得放入所有玩家都能讀取的 `publicState`；核心日後會提供按觀看者送出不同模型的私有視圖。
 - 模組只處理合法動作與規則，Display／Interaction 實體生成、清理、動畫及重啟復原由核心負責。
